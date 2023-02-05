@@ -1,0 +1,240 @@
+print("Jakiego bohatera chcesz wybierasz")
+print("A - Lis      B - Wilk ")
+
+odp = input("Opd =")
+
+#A - Lis = informacja
+if odp == "A":
+    xxx = {
+            "imię": "Roxy",
+            "kryształów masz": "10",
+            "życia masz":"3",
+            "na plecaku masz":"miecz, woda i dwie kanapy",
+            "twój cel": "znaleść skarb w lasie",
+    }
+    for klucz in xxx:
+        print(f"{klucz}\t{xxx[klucz]}")
+    print("=="*30)    
+    #początek przygody       
+    print("Masz na ręce mapa. Dalej trzeba iść po lasie. Na drodze spotykasz Thanosa. Co zrobisz?")
+    print("Trzeba grać w grę - Gra papier, kamień, nożyce ")
+    print("Wiedz, że jeśli wygrasz to możesz dostać 5 Krzyształów a jeśli przegrasz, on cię zje ")
+    
+    import time
+    import random
+            
+    
+    while True:
+        variant = input("Wybierz: kamień, nożyce czy papier? (z małą literą)")
+        time.sleep(1)                
+        print("Sprawdzanie pisowni...")
+        time.sleep(1)
+        #variant to kto wprowadza a comp = Thanos
+        if variant == "kamień" or variant == "nożyce" or variant =="papier" :
+            print("Wszystko jest poprawne. Gra trwa.")
+            time.sleep(1)
+            print("Teraz Thanos dokonuje wyboru...")
+            comp = random.randint(1, 3)
+            if comp == 1:
+                comp = "kamień"
+            elif comp == 2:
+                    comp == "nożyce"
+            else:
+                comp = "papier"
+                time.sleep(1)
+                print("Wybór został dokonany.")
+                time.sleep (1)
+                print("Gra się rozpoczyna!")
+                time.sleep(1)
+                print ("1 - kamień...")
+                time.sleep(1)
+                print("2 - nożyce...")
+                time.sleep (1)
+                print("3 - papier...")
+                    
+                if variant == "papier" and comp == "kamień":
+                    print("Thanos wybrał kamień...")
+                    print("Wygrałeś(łaś) i zabiłeś(łaś) Thanosa i dostałeś(łaś) 5 krzyształów")
+                    print()
+                    time.sleep(1)
+                    xxx = {
+                        "imię": "Roxy",
+                        "kryształów masz": "15",
+                        "życia masz":"2",
+                        "na plecaku masz":"miecz",
+                        "twój cel": "znaleść skarb",
+                           
+                    }
+                    for klucz in xxx:
+                        print(f"{klucz}\t{xxx[klucz]}")
+                    print("Znalazłeś skarba w Grenlandii. Za 15 Krzyształów dostaniesz skarb z millionami brilliantów ")
+                    
+
+                elif variant == "kamień" and comp =="nożyce": 
+                    print("Thanos wybrał nożyczki... ") 
+                    print("Wygrałeś(łaś) i zabiłeś(łaś) Thanosa i dostałeś(łaś) 5 krzyształów")
+                    print()
+                    time.sleep(1)
+                    xxx = {
+                        "imię": "Roxy",
+                        "kryształów masz": "15",
+                        "życia masz":"2",
+                        "na plecaku masz":"miecz",
+                        "twój cel": "znaleść skarb",
+                            
+                    }
+                    for klucz in xxx:
+                        print(f"{klucz}\t{xxx[klucz]}")
+                    print("Znalazłeś skarba w Grenlandii. Za 15 Krzyształów dostaniesz skarb z millionami brilliantów ")
+                    
+                elif variant == "nożyczki" and comp == "papier":
+                    print("Thanos wybrał papier...")
+                    print("Wygrałeś(łaś) i zabiłeś(łaś) Thanosa i dostałeś(łaś) 5 krzyształów")
+                    print()
+                    time.sleep(1)
+                    xxx = {                           
+                        "imię": "Roxy",
+                        "kryształów masz": "15",
+                        "życia masz":"2",
+                        "na plecaku masz":"miecz",
+                        "twój cel": "znaleść skarb",
+                            
+                    }
+                    for klucz in xxx:
+                        print(f"{klucz}\t{xxx[klucz]}")
+                    print("Znalazłeś skarba w Grenlandii. Za 15 Krzyształów dostaniesz skarb z millionami brilliantów ")
+                    
+                elif variant == comp: 
+                    print("Thanos wybrał", comp, ". . .") 
+                    time.sleep (1)
+                    print("Remis!")
+                    print()
+                    time.sleep (1)
+                else: 
+                    print("Thanos wybrał", comp, ". . .")   
+                    time.sleep (1)
+                    print("Przegrałeś!")
+                    print("On cię zjadł")
+                    
+                          
+    else:
+        print("Nie ma takiej komendy")
+        
+
+#B - Wilk = informacja
+elif odp == "B":
+    import time
+    xxx = {
+            "imię": "Rex",
+            "kryształów masz": "15",
+            "życia masz":"3",
+            "na plecaku masz":"mapa skarbów, miecz i woda",
+            "twój cel": "znaleść skarb na dnie oceanu",
+            
+        }
+    for klucz in xxx:
+        print(f"{klucz}\t{xxx[klucz]}")
+    
+    print()
+    print("Jesteś w statku. Na ręce masz mapa, żeby znaleść skarb musisz wybrać poprawną odpowiedż na zagadkę, są trzy opcji.  ")
+    print("Masz tylko jedną próba. Za niepoprawną sracisz 5 KRZYSZTAŁÓW i Jedną życia. ")
+    print("Jeśli wygrasz dostaniesz 5 KRZYSZTAŁÓW")
+    print("Największa wyspa na świecie?")
+    print("A - Nowa Gwinea   B - Borneo   C - Grenlandia")
+    odpow = input("Opd =")
+    if odpow == "A":
+        print("Odpowiedż jest niepoprawna!!!!!!")
+        print("Straciłaś(łeś) 5 krzyształów i życia")
+        xxx = {
+            "imię": "Rex",
+            "kryształów masz": "10",
+            "życia masz":"2",
+            "na plecaku masz":"mapa skarbów, miecz i woda",
+            "twój cel": "znaleść skarb na dnie oceanu",
+            
+        }
+        for klucz in xxx:
+            print(f"{klucz}\t{xxx[klucz]}")
+        
+    elif odpow == "B":
+        print("Odpowiedż jest niepoprawna!!!!!!")
+        print("Straciłaś(łeś) 5 krzyształów i życia")
+        xxx = {
+            "imię": "Rex",
+            "kryształów masz": "10",
+            "życia masz":"2",
+            "na plecaku masz":"mapa skarbów, miecz i woda",
+            "twój cel": "znaleść skarb na dnie oceanu",
+            
+        }
+        for klucz in xxx:
+            print(f"{klucz}\t{xxx[klucz]}")
+               
+    elif odpow == "C":
+        print("Gratuluję odpowiedż jest poprawna!!!!!!") 
+        print("Dostałaś(łeś) 5 krzyształów")
+        xxx = {
+            "imię": "Rex",
+            "kryształów masz": "20",
+            "życia masz":"3",
+            "na plecaku masz":"mapa skarbów, miecz i woda",
+            "twój cel": "znaleść skarb na dnie oceanu",
+            
+        }
+        for klucz in xxx:
+            print(f"{klucz}\t{xxx[klucz]}")
+        print("Płynieś statkem do Grenlandii.")    
+        print("Już jesteś w Grenlandii ")
+        print("Skąd pochodzili mieszkańcy Grenlandii ")            
+        print("A - Azja Środkowa   B - Azja poludniowo wschodnia   C - Azja poludniowa")
+        odpowi = input("Odp =")
+        if odpowi == "A":
+                print("Gratuluję odpowiedż jest poprawna!!!!!!") 
+                print("Dostałaś(łeś) 5 krzyształów")
+                xxx = {
+                    "imię": "Rex",
+                    "kryształów masz": "25",
+                    "życia masz":"3",
+                    "na plecaku masz":"mapa skarbów, miecz i woda",
+                    "twój cel": "znaleść skarb na dnie oceanu",
+            
+                }
+                for klucz in xxx:
+                    print(f"{klucz}\t{xxx[klucz]}")
+                print("Znalazłeś skarba w Grenlandii. Za 25 Krzyształów dostaniesz skarb w którym milliard brilliantów ")
+                
+        elif odpowi == "B":
+                print("Odpowiedż jest niepoprawna!!!!!!")
+                print("Straciłaś(łeś) 5 krzyształów i życia")
+                xxx = {
+                    "imię": "Rex",
+                    "kryształów masz": "15",
+                    "życia masz":"2",
+                    "na plecaku masz":"mapa skarbów, miecz i woda",
+                    "twój cel": "znaleść skarb na dnie oceanu",
+                }
+                for klucz in xxx:
+                    print(f"{klucz}\t{xxx[klucz]}")
+
+                print("Nieznalazłeś skarba w Grenlandii. Za 5 Krzyształów dostaniesz skarb w którym million brilliantów ")    
+        elif odpowi == "C":
+                print("Odpowiedż jest niepoprawna!!!!!!")
+                print("Straciłaś(łeś) 5 krzyształów i życia")
+                xxx = {
+                    "imię": "Rex",
+                    "kryształów masz": "15",
+                    "życia masz":"2",
+                    "na plecaku masz":"mapa skarbów, miecz i woda",
+                    "twój cel": "znaleść skarb na dnie oceanu",
+                }
+                for klucz in xxx:
+                    print(f"{klucz}\t{xxx[klucz]}")        
+
+                print("Nieznalazłeś skarba w Grenlandii. Za 5 Krzyształów dostaniesz skarb w którym million brilliantów ")
+
+
+        else:
+                print("Nie ma takiej komendy")        
+
+else:
+    print("Nie ma takiej komendy") 
