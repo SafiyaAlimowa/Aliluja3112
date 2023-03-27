@@ -1,0 +1,53 @@
+#znajduje liczbą pirwszą w C#
+while (true)
+            {
+                int liczba = int.Parse(Console.ReadLine());
+
+                if (liczba % 2 != 0 && liczba % 5 != 0 && liczba % 3 != 0 && liczba % 7 != 0)
+                {
+                    
+                    Console.WriteLine("Ta liczba jest liczbą pierwszą");
+
+                }
+                else
+                {
+                    Console.WriteLine("Ta liczba jest liczbą złożoną");
+                }
+
+            }
+            
+#znajduje liczbą pirwszą w python
+while True:
+    a = int(input())
+    if a % 2 !=0 and a % 3 !=0 and a % 5 !=0 and a % 7 !=0 :
+        print("Ta liczba jest liczbą pierwszą")
+    else:
+        print("Ta liczba jest liczbą złożoną") 
+        
+ #rozkład lizby na czynniki pierwsze w C#     
+int x, i, e;
+            
+            x = int.Parse(Console.ReadLine());
+
+            i = 2;
+            e = (int)Math.Sqrt(x);
+            while (i <= e)
+            {
+                while (x % i == 0)
+                {
+                    x /= i;
+                    e = (int)Math.Sqrt(x);
+                    Console.WriteLine (i);
+                }
+                i++;
+            }
+            if (x > 1) Console.WriteLine(x);
+            
+#rozkład lizby na czynniki pierwsze w python
+
+            
+            
+            
+            
+            
+            
