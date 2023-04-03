@@ -1,0 +1,76 @@
+#1
+def lesser():
+     while True:
+          a = int(input())
+          b = int(input())
+          if a < b:
+               print(a)
+               print()
+          elif b < a:
+               print(b)
+               print()
+          else:
+               print("Te liczby są równe")
+               print()
+print(lesser())
+  
+
+#2
+while True:
+    import random
+    a = int(input("Wybieraj: 1 albo -1 "))
+    for i in range(1):
+        b = random.randrange(-1, 2, 2)
+        print(b)
+    if a > 0 and a * b  > 0:
+        print("Gratuluję!!! Ty wygrałeś")
+    elif a < 0 and a * b  > 0:
+        print("Niestety pregrałeś, ale masz jeszcze szanse.")   
+    elif a > 0 and a * b  < 0:
+        print("Gratuluję!!! Ty wygrałeś")
+    elif a < 0 and a * b  < 0:
+        print("Niestety pregrałeś, ale masz jeszcze szanse.")   
+    else:
+        print("Nie ma takiej komandy!!!")
+#3        
+def implication():
+    while True:
+         print("1 = True    0 = False")
+         p = int(input())
+         q = int(input())
+         if p == 1 and q == 1:
+              print("True")
+              print()
+         elif p == 1 and q == 0:
+              print("False")
+              print()
+         elif p == 0 and q == 1:
+              print("True")
+              print()
+         elif p == 0 and q == 0:
+              print("True")
+              print()
+         else:
+              print("Nie ma takiej komendy ")
+              print()
+   
+print(implication())  
+
+
+#4
+import random
+def quiz():
+    for i in range(10):
+        num1 = random.randint(1, 10)
+        num2 = random.randint(1, 10)
+        while True:
+            user_answer = input(f"What is {num1} x {num2}? ")
+            if int(user_answer) == num1 * num2:
+               print("Gratuluje!!! Ta rawidłowa odpowiedż!")
+               print()
+               break
+            else:
+               print("Błędny. Spróbuj ponownie.")
+               print()
+quiz()
+        
